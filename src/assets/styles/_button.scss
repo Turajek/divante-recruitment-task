@@ -14,4 +14,8 @@
     border-radius: .25rem;
     background: $accent;
     color: $white;
+    &:disabled {
+        cursor:not-allowed;
+        filter: grayscale(.5)
+    }
 }

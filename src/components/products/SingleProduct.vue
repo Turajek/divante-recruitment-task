@@ -6,7 +6,9 @@
     <div class="singleProduct-info">
       <h3>{{singleProduct.title}}</h3>
       <p>{{singleProduct.description}}</p>
-      <button class="btn">Add to cart</button>
+
+      <button class="btn" v-if="isProductAdded" type="button" disabled>Added</button>
+      <button class="btn" v-else @click="$store.commit('ADD_TO_CART', singleProduct)">Add to cart</button>
     </div>
   </div>
 </template>
@@ -16,6 +18,10 @@ export default {
   computed: {
     singleProduct() {
       return this.$store.getters.getSingleProduct;
+    },
+    isProductAdded() {
+      var id = this.singleProduct.id;
+      return this.$store.getters.isProductAdded(id);
     }
   },
   created() {

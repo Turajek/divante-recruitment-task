@@ -4,6 +4,7 @@ import Vuex from 'vuex'
 import products from './products';
 import singleProduct from './single-product';
 import loader from './loader';
+import cart from './cart';
 Vue.use(Vuex)
 
 export default new Vuex.Store({
@@ -11,5 +12,6 @@ export default new Vuex.Store({
         loader,
         products,
         singleProduct,
+        cart
     }
 })

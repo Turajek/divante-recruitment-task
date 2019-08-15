@@ -3,9 +3,8 @@
     <div class="productItem-photo" :style="{ backgroundImage: 'url(' + product.imageUrl + ')' }"></div>
     <h4>{{product.title}}</h4>
     <div class="product-price">
-      <b>{{product.price.toFixed(2)}}</b> PLN
-      <template v-if="product.priceType == 1">/pc.</template>
-      <template v-else>/kg</template>
+      <b>{{product.price.toFixed(2)}}</b>
+      PLN
     </div>
   </div>
 </template>

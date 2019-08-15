@@ -1,7 +1,8 @@
 import axios from 'axios';
 export default {
     state: {
-        products: []
+        products: [],
+        productsFilter: ''
     },
     getters: {
         getProducts: state => state.products
@@ -9,14 +10,18 @@ export default {
     mutations: {
         SET_PRODUCTS(state, products) {
             state.products = products;
+        },
+        SET_PRODUCTS_FILTER(state, filter) {
+            state.productsFilter = filter;
         }
     },
     actions: {
-        async fetchProducts({ commit }) {
+        async fetchProducts({ state, commit }) {
             const { data } = await axios.get(
                 "/shop/products/get-products", {
                     params: {
-                        limit: 20
+                        limit: 20,
+                        filter: state.productsFilter
                     }
                 }
             );
