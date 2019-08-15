@@ -37,7 +37,9 @@ export default {
   display: flex;
   align-items: center;
   background: $search;
-
+  @media (max-width: 500px) {
+    margin: 0;
+  }
   &-input {
     max-width: 0;
     overflow: hidden;

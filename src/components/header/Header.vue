@@ -1,7 +1,9 @@
 <template>
   <header class="header">
-    <div class="header-wrap container">
-      <div class="header-logo">LOGO</div>
+    <div class="container header-wrap">
+      <router-link to="/">
+        <div class="header-logo">LOGO</div>
+      </router-link>
       <div class="header-right">
         <Menu />
         <Search />
@@ -29,6 +31,9 @@ export default {
     justify-content: space-between;
     align-items: center;
     height: 90px;
+    @media (max-width: 500px) {
+      padding: 0;
+    }
   }
   &-logo {
     color: $light-text;
