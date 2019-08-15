@@ -5,13 +5,13 @@ body {
 
 section {
     width: 100%;
-    height: calc(100vh - 91px);
+    min-height: calc(100vh - 91px);
     display: flex;
     justify-content: center;
     align-items:center;
 }
 .container {
-    max-width: 1400px;
+    max-width: 1450px;
     padding: 0 20px;
     margin: 0 auto;
   }

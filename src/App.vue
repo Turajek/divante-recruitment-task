@@ -6,13 +6,21 @@
         <router-view />
       </transition>
     </div>
+    <Loader v-if="isLoading" />
+    <notifications group="foo" />
   </div>
 </template>
 <script>
 import Header from "@/components/header/Header.vue";
+import Loader from "@/components/ui/Loader.vue";
+import { mapGetters } from "vuex";
 export default {
   components: {
-    Header
+    Header,
+    Loader
+  },
+  computed: {
+    ...mapGetters(["isLoading"])
   }
 };
 </script>
