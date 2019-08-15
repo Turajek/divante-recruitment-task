@@ -2,3 +2,16 @@ body {
     font-family: $main-font;
     font-weight: $main-weight;
 }
+
+section {
+    width: 100%;
+    height: calc(100vh - 91px);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.container {
+    max-width: 1400px;
+    padding: 0 20px;
+    margin: 0 auto;
+  }

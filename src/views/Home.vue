@@ -1,10 +1,20 @@
 <template>
-  <section class="home">home</section>
+  <section class="home">
+    <SideBar />
+  </section>
 </template>
 
 <script>
-export default {};
+import SideBar from "@/components/sidebar/SideBar.vue";
+export default {
+  components: {
+    SideBar
+  }
+};
 </script>
 
 <style lang="scss">
+.home {
+  justify-content: flex-start;
+}
 </style>
