@@ -47,8 +47,6 @@ export default {
     &.active {
       max-width: 500px;
       padding: 0 20px;
-      input {
-      }
     }
     input {
       display: block;
@@ -63,7 +61,6 @@ export default {
       transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     }
   }
-
   &-icon {
     width: 90px;
     height: 100%;

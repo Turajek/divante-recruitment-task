@@ -10,7 +10,7 @@
     </div>
   </div>
 </template>
-<style scoped>
+<style lang="scss" scoped>
 .loader {
   position: fixed;
   top: 0;
@@ -19,40 +19,42 @@
   height: 100vh;
   background: white;
   z-index: 1000;
+  &-in {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
-.loader-in {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
+
 .lds-ring {
   display: inline-block;
   position: relative;
   width: 128px;
   height: 128px;
+  div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 102px;
+    height: 102px;
+    margin: 4px;
+    border: 3px solid black;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: black transparent transparent transparent;
+    &:nth-child(1) {
+      animation-delay: -0.45s;
+    }
+    &:nth-child(2) {
+      animation-delay: -0.3s;
+    }
+    &:nth-child(3) {
+      animation-delay: -0.15s;
+    }
+  }
 }
-.lds-ring div {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 102px;
-  height: 102px;
-  margin: 4px;
-  border: 3px solid black;
-  border-radius: 50%;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: black transparent transparent transparent;
-}
-.lds-ring div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-.lds-ring div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-.lds-ring div:nth-child(3) {
-  animation-delay: -0.15s;
-}
+
 @keyframes lds-ring {
   0% {
     transform: rotate(0deg);

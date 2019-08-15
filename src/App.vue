@@ -20,7 +20,9 @@ export default {
     Loader
   },
   computed: {
-    ...mapGetters(["isLoading"])
+    isLoading() {
+      return this.$store.getters.isLoading;
+    }
   }
 };
 </script>

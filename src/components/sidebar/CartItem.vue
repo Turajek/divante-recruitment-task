@@ -22,7 +22,6 @@ export default {
   background: $dark-blue;
   padding: 10px;
   margin: 5px;
-
   &-price {
     color: $accent;
   }

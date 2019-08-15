@@ -25,7 +25,6 @@ export default {
   }
   &-icon {
     font-size: 50px;
-
     cursor: pointer;
   }
   &-content {
@@ -40,7 +39,6 @@ export default {
     transform: translateX(300px);
     transition: transform 1s;
     box-shadow: 0 0 14px 2px rgba($gray, 0.75);
-
     div {
       padding: 10px;
     }
